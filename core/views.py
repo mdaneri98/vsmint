@@ -6,7 +6,4 @@ from django import views
 class Home(views.View):
 
     def get(self, request):
-        
-
-
         return HttpResponse("Todo ok!")

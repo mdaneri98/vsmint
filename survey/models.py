@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class SurveyQuestion(models.Model):
@@ -30,6 +31,7 @@ class SurveyUserAnswer(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     s_question = models.OneToOneField(SurveyQuestion, on_delete=models.CASCADE)
     answer = models.CharField(max_length=40)  # Debería no poder cambiarse una vez creado
-
+    
+    
 
         
